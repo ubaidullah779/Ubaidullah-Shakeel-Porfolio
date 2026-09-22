@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Ubaidullah</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="bg-grid"></div><div class="glow"></div>
+<main class="shell">
+  <section id="loginView" class="login-card">
+    <div class="eyebrow"><span class="dot"></span> PRIVATE ADMIN</div>
+    <div class="brand">UBAIDULLAH<span>.</span></div>
+    <h1>Welcome back.</h1>
+    <p>Sign in to manage your portfolio messages.</p>
+    <form id="loginForm">
+      <label>Username<input id="username" autocomplete="username" required value="admin"></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="••••••••••"></label>
+      <button type="submit">Sign in <span>↗</span></button>
+      <div id="loginError" class="error"></div>
+    </form>
+    <a class="back" href="/">← Back to portfolio</a>
+  </section>
+
+  <section id="dashboard" class="dashboard hidden">
+    <header class="topbar">
+      <div><div class="eyebrow"><span class="dot"></span> ADMIN DASHBOARD</div><h1>Messages</h1></div>
+      <div class="top-actions"><a href="/" target="_blank">View site ↗</a><button id="logout" class="ghost">Logout</button></div>
+    </header>
+    <div class="stats"><div class="stat"><small>Total</small><strong id="total">0</strong></div><div class="stat"><small>Unread</small><strong id="unread">0</strong></div><div class="stat"><small>Latest</small><strong id="latest">—</strong></div></div>
+    <div class="toolbar"><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="unread">Unread</button><button class="filter" data-filter="read">Read</button></div><button id="refresh" class="refresh">↻ Refresh</button></div>
+    <div id="messageList" class="message-list"></div>
+    <div id="empty" class="empty hidden"><div>✦</div><h2>No messages yet</h2><p>Messages sent through your portfolio contact form will appear here.</p></div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
